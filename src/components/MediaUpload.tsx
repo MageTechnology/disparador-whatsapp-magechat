@@ -89,7 +89,7 @@ export function MediaUpload({ onMediaSelected, accept = "image/*,video/*", maxSi
 
   return (
     <div className="flex flex-col gap-2">
-      <Button type="button" onClick={() => inputRef.current?.click()} className="w-fit">
+      <Button type="button" onClick={() => inputRef.current?.click()} className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-5 py-2 rounded-xl font-medium shadow transition w-fit">
         Escolher arquivo
       </Button>
       <input

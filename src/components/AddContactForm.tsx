@@ -106,7 +106,7 @@ export function AddContactsBulkForm() {
         className="resize-none"
       />
       <div className="flex items-center gap-2">
-        <Button asChild type="button">
+        <Button asChild type="button" className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-5 py-2 rounded-xl font-medium shadow transition">
           <label>
             Upload CSV
             <input
@@ -117,7 +117,7 @@ export function AddContactsBulkForm() {
             />
           </label>
         </Button>
-        <Button type="submit" className="self-end">Adicionar contatos</Button>
+        <Button type="submit" className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-5 py-2 rounded-xl font-medium shadow transition self-end">Adicionar contatos</Button>
       </div>
       {success && <div className="text-green-600 text-sm">{success}</div>}
       {errors.length > 0 && (

@@ -49,14 +49,14 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-background p-4 sm:p-8">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-[#f7f8fa] p-4 sm:p-8">
       <Toaster />
-      <h1 className="text-3xl font-bold mb-6 text-center">Disparador WhatsApp</h1>
-      <div className="w-full max-w-2xl flex flex-col gap-6">
+      <h1 className="text-3xl font-semibold mb-8 text-[#222] tracking-tight">Disparador WhatsApp</h1>
+      <div className="w-full max-w-2xl flex flex-col gap-8">
         <MessageTemplateEditor />
         {/* Seção de upload de mídia */}
-        <section className="bg-card rounded-lg shadow p-4">
-          <h2 className="text-xl font-semibold mb-2">Adicionar Mídia (opcional)</h2>
+        <section className="bg-white rounded-2xl shadow-md border border-[#e5e7eb] p-6">
+          <h2 className="text-lg font-semibold mb-2 text-[#222]">Adicionar Mídia (opcional)</h2>
           <MediaUpload onMediaSelected={setMedia} />
           {media && (
             <div className="text-xs text-muted-foreground mt-1">
@@ -66,24 +66,24 @@ export default function Home() {
           )}
         </section>
         {/* Formulário para adicionar contato */}
-        <section className="bg-card rounded-lg shadow p-4">
-          <h2 className="text-xl font-semibold mb-2">Adicionar Contato</h2>
+        <section className="bg-white rounded-2xl shadow-md border border-[#e5e7eb] p-6">
+          <h2 className="text-lg font-semibold mb-2 text-[#222]">Adicionar Contato</h2>
           <AddContactsBulkForm />
         </section>
         {/* Preview da mensagem */}
-        <section className="bg-card rounded-lg shadow p-4">
-          <h2 className="text-xl font-semibold mb-2">Preview da Mensagem</h2>
+        <section className="bg-white rounded-2xl shadow-md border border-[#e5e7eb] p-6">
+          <h2 className="text-lg font-semibold mb-2 text-[#222]">Preview da Mensagem</h2>
           <MessagePreview />
         </section>
         {/* Tabela de contatos */}
-        <section className="bg-card rounded-lg shadow p-4">
-          <h2 className="text-xl font-semibold mb-2">Contatos</h2>
+        <section className="bg-white rounded-2xl shadow-md border border-[#e5e7eb] p-6">
+          <h2 className="text-lg font-semibold mb-2 text-[#222]">Contatos</h2>
           <ContactsTable />
         </section>
         {/* Botão de disparo */}
         <div className="flex justify-end">
           <button
-            className="bg-primary text-primary-foreground px-6 py-2 rounded font-medium shadow hover:bg-primary/90 transition disabled:opacity-50"
+            className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-8 py-3 rounded-xl font-medium shadow transition disabled:opacity-50"
             onClick={handleSend}
             disabled={loading}
           >
