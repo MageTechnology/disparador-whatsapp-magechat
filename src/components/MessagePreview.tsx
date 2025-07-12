@@ -11,8 +11,7 @@ export function MessagePreview() {
   if (contacts.length === 0) {
     return <div className="text-muted-foreground text-center py-4">Nenhum contato para pré-visualizar.</div>;
   }
-  const previewContacts = contacts.slice(0, 3);
-  const remaining = contacts.length - previewContacts.length;
+  const previewContact = contacts[0];
 
   function renderMessage(nome: string) {
     return template.replace("{{nome}}", nome);
@@ -23,20 +22,13 @@ export function MessagePreview() {
       <CardHeader>
         <CardTitle>Preview da Mensagem</CardTitle>
         <CardDescription>
-          Veja como a mensagem será enviada para os contatos:
+          Veja como a mensagem será enviada para o primeiro contato:
         </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-2">
-        {previewContacts.map((c) => (
-          <div key={c.telefone} className="p-2 rounded bg-muted">
-            <span className="font-semibold">{c.nome}:</span> {renderMessage(c.nome)}
-          </div>
-        ))}
-        {remaining > 0 && (
-          <div className="text-xs text-muted-foreground mt-2">
-            ...e mais {remaining} contato(s)
-          </div>
-        )}
+        <div className="p-2 rounded bg-muted">
+          <span className="font-semibold">{previewContact.nome}:</span> {renderMessage(previewContact.nome)}
+        </div>
       </CardContent>
     </Card>
   );

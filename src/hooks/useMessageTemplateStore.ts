@@ -5,7 +5,7 @@ interface MessageTemplateStore {
   setTemplate: (t: string) => void;
 }
 
-const DEFAULT_TEMPLATE = "Olá {{nome}} tudo bem contigo? essa é uma mensagem disparada pelo disparador mage disparos";
+const DEFAULT_TEMPLATE = "";
 
 export const useMessageTemplateStore = create<MessageTemplateStore>((set) => ({
   template: DEFAULT_TEMPLATE,

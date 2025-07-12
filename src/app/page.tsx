@@ -53,7 +53,10 @@ export default function Home() {
       <Toaster />
       <h1 className="text-3xl font-semibold mb-8 text-[#222] tracking-tight">Disparador WhatsApp</h1>
       <div className="w-full max-w-2xl flex flex-col gap-8">
-        <MessageTemplateEditor />
+        <section className="bg-white rounded-2xl shadow-md border border-[#e5e7eb] p-6">
+          <h2 className="text-lg font-semibold mb-2 text-[#222]">Mensagem</h2>
+          <MessageTemplateEditor />
+        </section>
         {/* Seção de upload de mídia */}
         <section className="bg-white rounded-2xl shadow-md border border-[#e5e7eb] p-6">
           <h2 className="text-lg font-semibold mb-2 text-[#222]">Adicionar Mídia (opcional)</h2>
